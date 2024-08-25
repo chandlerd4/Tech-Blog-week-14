@@ -1,0 +1,45 @@
+{{!-- Extending the main layout --}}
+{{#extend "main"}}
+
+{{#content "title"}}{{post.title}}{{/content}}
+
+<div class="post-details">
+    <h2>{{post.title}}</h2>
+    <p class="meta">By {{post.User.username}} on {{formatDate post.createdAt}}</p>
+    <p>{{post.content}}</p>
+
+    {{!-- Comments Section --}}
+    <div class="comments">
+        <h3>Comments</h3>
+
+        {{#if post.Comments.length}}
+            <ul>
+                {{#each post.Comments}}
+                    <li class="comment">
+                        <p>{{this.content}}</p>
+                        <small>By {{this.User.username}} on {{formatDate this.createdAt}}</small>
+                    </li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p>No comments yet. Be the first to comment!</p>
+        {{/if}}
+    </div>
+
+    {{!-- Add Comment Form --}}
+    {{#if user}}
+        <div class="add-comment">
+            <h3>Add a Comment</h3>
+            <form action="/comment/create" method="POST">
+                <input type="hidden" name="postId" value="{{post.id}}">
+                <label for="content">Your Comment</label>
+                <textarea name="content" id="content" rows="4" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    {{else}}
+        <p><a href="/login">Log in</a> to add a comment.</p>
+    {{/if}}
+</div>
+
+{{/extend}}

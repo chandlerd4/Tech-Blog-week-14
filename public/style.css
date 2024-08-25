@@ -1,0 +1,161 @@
+/* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, figure {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f53b3b;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background: #cc8c39;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #7c3030;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #ce4141;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #d44f4f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Blog Post Styles */
+.post {
+    margin-bottom: 40px;
+}
+
+.post h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.post p {
+    margin-bottom: 20px;
+}
+
+.post .meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Comment Section Styles */
+.comments {
+    margin-top: 40px;
+}
+
+.comments h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #6b3d3d;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    margin-bottom: 5px;
+}
+
+.comment .meta {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input[type="submit"],
+form button {
+    background: #805656;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+    background: #555;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background: #ca5f5f;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}

@@ -1,0 +1,34 @@
+{{!-- Extending the main layout --}}
+{{#extend "main"}}
+
+{{#content "title"}}Home{{/content}}
+
+<div class="home">
+    <h2>Latest Posts</h2>
+
+    {{!-- List of blog posts --}}
+    <div class="posts">
+        {{#if posts.length}}
+            <ul>
+                {{#each posts}}
+                    <li class="post">
+                        <h3><a href="/post/{{this.id}}">{{this.title}}</a></h3>
+                        <p>{{this.content}}</p>
+                        <small>By {{this.User.username}} on {{formatDate this.createdAt}}</small>
+                    </li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p>No posts available. Be the first to <a href="/dashboard">create a post</a>!</p>
+        {{/if}}
+    </div>
+
+    {{!-- Link to login or signup if not logged in --}}
+    {{#unless user}}
+    <div class="auth-links">
+        <p><a href="/login">Log in</a> or <a href="/signup">Sign up</a> to create a new post.</p>
+    </div>
+    {{/unless}}
+</div>
+
+{{/extend}}

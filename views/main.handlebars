@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../puclic/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Tech Blog</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        {{#if user}}
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        {{else}}
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
+        {{/if}}
+    </nav>
+
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    <footer>
+        <p>&copy; {{currentYear}} Tech Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
